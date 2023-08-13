@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss",
               "node_modules/nice-solaris-ngx/src/styles/sol-core.scss",
               "node_modules/nice-solaris-ngx/src/assets/typefaces.css"
@@ -92,6 +93,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss",
               "node_modules/nouislider/dist/nouislider.min.css",
               "node_modules/nice-solaris-ngx/src/styles/sol-core.scss",

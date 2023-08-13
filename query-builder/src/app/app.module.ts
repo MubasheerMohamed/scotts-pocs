@@ -10,9 +10,16 @@ import { CommonModule } from '@angular/common';
 import { PopoverComponent } from './popover/popover.component';
 import { QuerybuilderComponent } from './querybuilder/querybuilder.component';
 import { FormsModule } from '@angular/forms';
-import { QuerychipComponent } from './querychip/querychip.component';
+import { QuerychipwrapperComponent } from './querychip/querychipwrapper.component';
 import { MultiSelectComponent } from './editors/multiselect/multiseselect.component';
 import { DropdownModule } from 'nice-solaris-ngx/dropdown';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatMenuModule} from '@angular/material/menu';
+import { QuerychipComponent } from './querychip/querychip.component';
+import { QueryChipOverlayDirective } from './querychip/overlay.directive';
+import { CalendarModule } from 'nice-solaris-ngx/calendar';
+import { RangeSliderModule } from 'nice-solaris-ngx/range-slider';
+import { TagifyModule } from 'nice-solaris-ngx/tagify';
 
 @NgModule({
   declarations: [
@@ -21,7 +28,9 @@ import { DropdownModule } from 'nice-solaris-ngx/dropdown';
     MultiSelectComponent,
     PopoverComponent,
     QuerybuilderComponent,
-    QuerychipComponent
+    QuerychipComponent,
+    QuerychipwrapperComponent,
+    QueryChipOverlayDirective
   ],
   imports: [
     BrowserModule,
@@ -29,7 +38,13 @@ import { DropdownModule } from 'nice-solaris-ngx/dropdown';
     PortalModule,
     CommonModule,
     FormsModule,
-    DropdownModule
+    DropdownModule,
+    BrowserAnimationsModule,
+    PortalModule,
+    MatMenuModule,
+    CalendarModule,
+    RangeSliderModule,
+    TagifyModule
   ],
   providers: [],
   bootstrap: [AppComponent]

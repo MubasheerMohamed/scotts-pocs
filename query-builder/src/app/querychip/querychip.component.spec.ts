@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { QuerychipComponent } from './querychip.component';
+import { QuerychipComponent } from './querychipwrapper.component';
 
 describe('QuerychipComponent', () => {
   let component: QuerychipComponent;

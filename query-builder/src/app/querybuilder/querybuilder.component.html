@@ -1,13 +1,11 @@
-<div class="qb-wrapper">
-  <ng-template #viewContainerRef></ng-template>
-
-  <div>
-    <select (change)="onChange($event)">
-      <option value="add">+ Add Criteria</option>
-      <option *ngFor="let c of queryComponentDefinitions" [value]="c.id">{{c.description}}</option>
-    </select>
+<div style="display: flex;justify-content: space-between;width: 100%;">
+  <div *ngFor="let item of QuerychipArray$ | async">
+    <app-querychip-wrapper [show]="item.show" [name]="item.name" (closeEvent)="removeChip(item)">
+      <ng-container *ngTemplateOutlet="item.content"> </ng-container>
+    </app-querychip-wrapper>
   </div>
+  <button mat-button [matMenuTriggerFor]="menu" *ngIf="((hiddenChips$ | async) ?? []).length > 0">Add Criteria</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item *ngFor="let ch of hiddenChips$ | async" (click)="addChip(ch)">{{ch.name}}</button>
+  </mat-menu>
 </div>
-
-<hr>
-{{ model | json }}
